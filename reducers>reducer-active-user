@@ -1,12 +1,10 @@
-import { combineReducers } from 'redux';
-import UserReducer from './reducer-users';
-import ActiveUserReducer from './reducer-active-user';
+export default function(state=null,action){
 
-const allReducers=combineReducers({
-    users:UserReducer,
-    activeUser:ActiveUserReducer
-})
+    switch(action.type){
+        case "USER_SELECTED":
+        return action.payload
+        break;
 
-export default allReducers;
-
-
+    }
+    return state;
+}
